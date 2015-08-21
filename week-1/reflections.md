@@ -31,3 +31,14 @@ rm - remove, removes a file
 
 help - man, gives information regarding a command
 #1.4 Forking and Cloning
+To create a new repo, you first must log in to your github account. Click on the + to the left of your profile picture in the top right of the page and select "New repository". Give your new repository a name and the appropriate settings, click the button that says "Create repository", and you got yourself a brand new repo!
+
+To fork a repo, first navigate to the repo to be forked. Underneath your profile picture in the top right of the page is a fork button. Click the button, and select where you would like the repo to be forked. Et voila, the repo has been forked!
+
+To clone a repo, first navigate to the repo to be cloned. To the very right of the page near the bottom of the nav bar is the HTTP clone URL. Copy the URL in the box. Using your CLI, navigate to the directory you'd like the repo to be cloned into, then type "git clone " and then paste the URL previously copied. All the files from the repo will then be copied to your computer.
+
+You might choose to fork a repository so you can make changes and experiment wildly without any risk to the original. You might also use a forked version of the original as a launch pad for your own ideas, instead of starting off completely from scratch.
+
+A commit saves all your edits in a new version.
+
+I was uncomfortable with the lack of affirmations whilst setting up git and GitHub. The way things work in the command line, only giving back error messages and never a "everything went great!" message, just made me feel a little... uncertain. Fortunately, I feel back on solid ground after going around all my directories to check and make sure that everything is right where I put it. I learned to trust that no news is good news, and also got more practice on the command line!
