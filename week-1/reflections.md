@@ -4,6 +4,7 @@ As I began this challenge, I felt as though I manage my time fairly well. Curren
 Time Boxing is about having a set time dedicated to working on something. After the allotted time is up, you review how much work you were able to accomplish. The Pomodoro Technique is an example of Time Boxing. I had heard about this one before, but didn't fully understand it. The idea of taking a 5 minute break between each 25 minute block of work seems like a good way to actually end up working longer. I hear it's a good idea to look away from the computer screen every so often, too, to give your poor eyes a break. The only thing I'm still not completely sure about is how to know how many 25 minute blocks of work it will take to get through a project. I guess my estimations will get better as I get to know how well I work.
 
 The one thing that I have never concerned myself with was focus. I always had my phone sitting next to me and facebook open in one tab, and I'd freely check either while I was working. I'm going to start by simply removing these distractions, and try to go further by meditating every day. This is going to be the biggest thing for me to change about the way that I work, but I believe it will lead to more time in the flow. It's certainly worth trying!
+
 #1.2 The Command Line
 A shell is a way to navigate and utilize your computer using a command line and typed out commands. It's a precursor to the GUI. Bash is an example of a shell.
 
@@ -30,6 +31,7 @@ rmdir - remove directory, deletes an empty directory
 rm - remove, removes a file
 
 help - man, gives information regarding a command
+
 #1.4 Forking and Cloning
 To create a new repo, you first must log in to your github account. Click on the + to the left of your profile picture in the top right of the page and select "New repository". Give your new repository a name and the appropriate settings, click the button that says "Create repository", and you got yourself a brand new repo!
 
