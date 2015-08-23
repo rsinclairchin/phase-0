@@ -12,7 +12,9 @@
 <!-- Add your reflection here. Remove the comment markers -->
 
 Tracking and adding changes make developers' lives easier because each commit gives them a save point to go back to if sometime down the line they discover that they took a wrong turn. It saves having to go back all the way to the beginning and starting over. A commit is a snapshot of their work, a saved version as they continue to add changes.
+
 Commit messages help developers find out exactly what changes were implemented when, so it's important that these messages are written clearly. A commit message starts with a subject line. This should be a short, capitalized summary of the change(s) in the commit. After the subject line comes a blank line which may be followed by a body of text explaining the change in further detail. It's a good idea to keep the message in lines of 72 characters, to make it easy to read in an 80 column terminal. Also use imperitive present tense.
+
 The HEAD^ tag indicates the last commit made.
 A git change can be viewed in three stages. First, when changes have been made but not yet saved. Use the command "git add" to move them to the second stage and group them together for your commit. Third, use the command "git commit" to save your changes.
 
