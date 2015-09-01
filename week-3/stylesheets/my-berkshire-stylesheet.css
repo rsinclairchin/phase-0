@@ -1,0 +1,93 @@
+.container {
+    width: 100%;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+    color: #000080;
+}
+
+a {
+    color: purple;
+}
+
+a:active {
+    color: red;
+}
+
+.left-coloumn {
+    float: left;
+    display: inline-block;
+    width: 50%;
+}
+
+.right-coloumn {
+    float: right;
+    display: inline-block;
+    width: 50%;
+}
+
+.top {
+    float: top;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+header>h1 {
+        font-size: 212.5%;
+}
+
+header>h3 {
+        font-size: 120%;
+}
+
+.small {
+        font-size: 140%;
+}
+
+.geico {
+    float: bottom;
+    clear: both;
+    text-align: center;
+    font-size: 80%;
+    border-top: 1px solid black
+}
+
+.comments {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.bottom {
+    float: bottom;
+    clear: both;
+    font-size: 80%;
+}
+
+.block {
+    display: block;
+}
+
+li>p {
+    font-size: 50%;
+}
+
+.mini {
+       font-size: 50%;
+
+}
+/*
+When linking an external file such as a stylesheet into an HTML file, you should include three attributes. First, define the relationship between the working file and the external file. For linking CSS into HTML, it would be done with a link tag and a rel attribute: <link rel="stylesheet">. Second, declare the type of file being linked with the type attribute: <link rel="stylesheet" type="text/css">. The last attribute to include is the path to the file itself using href: <link rel="stylsheet" type="text/css" href="stylesheets/index.css">.
+
+We tried a few different things to work on positioning the elements. First, we tried breaking up the site into four divs; a top, bottom, left, and right. We floated them to where we thought they should go. We also displayed our left and right divs in inline-block to get them to sit next to each other. That only worked after we set the width of the right and left divs to 50% and the width of the container div to 100%. To keep the bottom from drifting up and next to our left and right divs, we set clear to both. Once we had this basic format, we went through much of the same process to position elements within the header, the footer, and the gieco ad.
+
+Since there is a distinct lack of flair within this website, most of our trickier styling was to do with font sizes. We used font-size for that. I am considering font-color and font-family to dress it up a bit, or maybe even throw in that image they suggested. We'll see.
+
+We decided to use classes within our html to target specific points on the page that we wanted to style. We chose classes instead of ids so that we could apply the same styling to multiple elements. Since we didn't know ahead of time what styling we'd want to put onto all the elements, choosing classes gave us the flexibility to apply css that we had already written on to elements that we had not yet considered. Now that we have all the styling laid out, we could use ids for the elements that don't share any styling with any other elements, but the classes are already there and they work just as well for these purposes. If we were to get into more a more complicated hierarchy of stylings, we might switch some of our classes to ids since id styling overrules class stylings.
+
+When we looked at the site's source code, we were very surprised to see all the inline styling they had done! We were also surprised that they had used a table to display their links. They had each table cell formatted with inline css, which would be a nightmare to go through and change if they ever decided they wanted something different. They also had empty div tags and p tags lying around, which seemed sloppy and untidy. Our code was much more organized, easier to read and easier to change. Our code totally won.
+*/
