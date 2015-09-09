@@ -1,0 +1,38 @@
+.debug {
+    border: 1px solid violet;
+}
+
+.column-1, .column-2 {
+    float: left;
+    width: 49%;
+}
+
+footer {
+    clear: both;
+}
+
+header {
+    text-align: center;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #6CDD0F;
+}
+
+h1, h2 {
+    color: #DE0F4E;
+}
+
+a:link, a:visited  {
+    text-decoration: none;
+    color: #F85311;
+}
+
+a:hover {
+    color: #FF8555;
+}
+
+ {
+    color: #F85311;
+}

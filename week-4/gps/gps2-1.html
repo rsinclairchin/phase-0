@@ -2,7 +2,7 @@
 Write your names here:
 1. Rosslyn
 2. Regina
-We spent [#] hours on this challenge.
+We spent [1.5] hours on this challenge.
 -->
 
 <!-- This challenge uses HTML5 syntax that may not be available in all browsers (It works in Chrome and Safari, from my testing. (<details> and<summary>). -->
@@ -16,7 +16,7 @@ We spent [#] hours on this challenge.
   </head>
 
   <body>
-    <header>
+    <header class="debug">
       <h1>GitHub: Git Cheat Sheet</h1>
       <p>Git is the open source distributed version control system that
         facilitates GitHub activities on your laptop or desktop.
@@ -24,7 +24,7 @@ We spent [#] hours on this challenge.
         instructions for quick reference.</p>
     </header>
 
-    <section class="column-1">
+    <section class="column-1 debug">
       <article>
         <h2>INSTALL GIT</h2>
         <p>GitHub provides desktop clients that include a graphical user
@@ -142,7 +142,7 @@ We spent [#] hours on this challenge.
       </article>
     </section>
 
-    <section class="column-2">
+    <section class="column-2 debug">
       <article>
         <h2>REFACTOR FILENAMES</h2>
         <p>Relocate and remove versioned files</p>
@@ -277,5 +277,11 @@ We spent [#] hours on this challenge.
       This information is copied directly from <a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">GitHub's Training Cheatsheet</a>.
     </footer>
   <!-- Add your reflection here as a comment. -->
+  <!--
+  Regina and I had different ideas on how to position the content into two coloums. I initially thought to change the display to inline-block, whereas her first thought was to use floats. It was pretty excellent because I was able to show her a little about the display property and she was able to show me about floats. I feel like we were both able to learn from each other in this challenge.
+  By changing the display to inline-block, we ran into a problem with the tops of the two coloumns not matching up. We had one a little taller than the other. This happened because the default value for the vertical-align property is baseline, which means it lines up the bottom of the elements. Easy fix, we just changed the vertical-align to top.
+  When we created the coloums by setting the float to left, we just had to make sure the footer cleared both so that it stayed at the bottom instead of squished up underneath the shorter coloumn.
+  Once we had set up our coloumns (twice), we had some fun playing around with the styling. We played with colours and fonts, learned a little bit about what fonts are good to use. Regina shared her favourite pallet generator with me and that was pretty awesome. We had a good time messing around before deciding to call it done. All in all, it was a fun challenge!
+  -->
   </body>
 </html>
