@@ -29,11 +29,11 @@
     i=0
     shorty = list_of_words[0]
     while i<=list_of_words.length do
-      if list_of_words[i].length <= shorty.length
-        shorty = list_of_words[i]
-        i += 1
+       if list_of_words[i].length <= shorty.length
+         shorty = list_of_words[i]
       end
-      return shorty
+       i += 1
+       return shorty
     end
   end
 end
