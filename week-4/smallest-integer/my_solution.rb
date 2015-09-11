@@ -25,14 +25,14 @@ def smallest_integer(list_of_nums)
   if list_of_nums.length == 0
     return nil
   else
-    small = list_of_nums[0]
+    smalls = list_of_nums[0]
     i=0
-    while i<list_of_nums.length
-      if list_of_nums[i] < small
-        small = list_of_nums[i]
+    while i<=list_of_nums.length do
+      if list_of_nums[i] <= smalls
+        smalls = list_of_nums[i]
       end
       i+=1
-      return small
+      return smalls
     end
   end
 end
