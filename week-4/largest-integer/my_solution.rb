@@ -25,12 +25,12 @@ def largest_integer(list_of_nums)
   else
     biggie = list_of_nums[0]
     i = 0
-    while i<list_of_nums.length
-      if list_of_nums[i] > biggie
+    while i<list_of_nums.length do
+      if list_of_nums[i] >= biggie
         biggie = list_of_nums[i]
       end
       i+=1
-      return biggie
     end
+    return biggie
   end
 end
