@@ -32,7 +32,7 @@ def smallest_integer(list_of_nums)
         smalls = list_of_nums[i]
       end
       i+=1
-      return smalls
     end
+    return smalls
   end
 end
