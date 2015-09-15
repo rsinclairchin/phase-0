@@ -59,14 +59,15 @@
 
 # 3. Refactored Solution
 def pad!(array, min_size, value = nil) #destructive
-  array.push(value) until array.length >= min_size
+  array << value until array.length >= min_size
   return array
 end
 
 def pad(array, min_size, value = nil) #non-destructive
   new_array = array.dup
-  new_array << value until new_array.length >= min_size
+  pad!(new_array, min_size, value)
   return new_array
 end
 
 # 4. Reflection
+
