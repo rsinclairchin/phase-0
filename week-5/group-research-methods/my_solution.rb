@@ -8,9 +8,9 @@
 # # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
   words = []
-  source.each do |word|
-    if word.is_a? String
-      words.push(word)
+  source.each do |item|
+    if item.is_a? String
+      words.push(item)
     end
   end
   found_things = []
