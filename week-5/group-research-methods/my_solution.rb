@@ -33,7 +33,7 @@ def my_hash_finding_method(source, thing_to_find)
 end
 
 # # Identify and describe the Ruby method(s) you implemented.
-# #
+# # I used the each method to iterate over both the array and the hash. I used an if statement within each each to check whether or not the item being iterated over was the thing I was looking for. If it was, I pushed it into a new array. At the end, I made sure to return that array that held all the things that matched what was being looked for.
 # #
 # #
 
