@@ -64,13 +64,9 @@ def pad!(array, min_size, value = nil) #destructive
 end
 
 def pad(array, min_size, value = nil) #non-destructive
-  if array.length < min_size
-    new_array = []
-    new_array.push(value) until new_array.length == (min_size - array.length)
-    new_array.unshift(array).flatten
-  else
-    array
-  end
+  new_array = array.dup
+  new_array << value until new_array.length >= min_size
+  return new_array
 end
 
 # 4. Reflection
