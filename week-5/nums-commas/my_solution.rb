@@ -22,7 +22,7 @@ def separate_comma(num)
   digits = stringy.split
   threes = 3
   while threes < digits.length
-    digits.insert(-3,',')
+    digits.insert(-threes,',')
     threes += 3
   end
   digits.join
