@@ -6,16 +6,36 @@
 # my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # # Person 1's solution
+# def my_array_finding_method(source, thing_to_find)
+#   words = []
+#   source.each do |item|
+#     if item.is_a? String
+#       words.push(item)
+#     end
+#   end
+#   found_things = []
+#   words.each do |word|
+#     if word.include?(thing_to_find)
+#       found_things.push(word)
+#     end
+#   end
+#   return found_things
+# end
+
+# def my_hash_finding_method(source, thing_to_find)
+#   found_things = []
+#   source.each do |pet, age|
+#     if age == thing_to_find
+#       found_things.push(pet)
+#     end
+#   end
+#   return found_things
+# end
 def my_array_finding_method(source, thing_to_find)
   words = []
-  source.each do |item|
-    if item.is_a? String
-      words.push(item)
-    end
-  end
   found_things = []
-  words.each do |word|
-    if word.include?(thing_to_find)
+  source.each do |word|
+    if word.is_a?(String) && word.include?(thing_to_find)
       found_things.push(word)
     end
   end
