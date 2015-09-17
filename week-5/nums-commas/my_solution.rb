@@ -1,6 +1,6 @@
 # Numbers to Commas Solo Challenge
 
-# I spent [] hours on this challenge.
+# I spent [2] hours on this challenge.
 
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code
@@ -30,8 +30,30 @@ end
 
 
 # 2. Refactored Solution
+def separate_comma(num)
+  stringy = num.to_s
+  digits = stringy.split(//)
+  threes = 4
+  while threes <= digits.length
+    digits.insert(-threes,',')
+    threes += 4
+  end
+  digits.join
+end
 
 
+# # 3. Reflection
+# What was your process for breaking the problem down? What different approaches did you consider?
 
 
-# 3. Reflection
+# Was your pseudocode effective in helping you build a successful initial solution?
+
+
+# What Ruby method(s) did you use when refactoring your solution? What difficulties did you have implementing it/them? Did it/they significantly change the way your code works? If so, how?
+
+
+# How did you initially iterate through the data structure?
+
+
+# Do you feel your refactored solution is more readable than your initial solution? Why?
+My refactored solution is
