@@ -16,11 +16,11 @@
 class Die
 
   def initialize(sides)
-    if sides.class != Integer
-      raise ArgumentError.new("Only Integers allowed. Positive ones.")
-    elsif sides < 1
+    if sides < 1
       raise ArgumentError.new("No negative-sided die, please")
-    @sides = sides
+    else
+      @sides = sides
+    end
   end
 
   def sides
