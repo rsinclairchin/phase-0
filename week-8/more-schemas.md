@@ -1,6 +1,6 @@
-![one-to-one schema](/imgs/onetoone.png)
-![many-to-many schema](/imgs/manytomany.png)
-![groceries schema](/imgs/groceries.png)
+![one-to-one schema](imgs/onetoone.png)
+![many-to-many schema](imgs/manytomany.png)
+![groceries schema](imgs/groceries.png)
 
 #What is a one-to-one database?
 One-to-one is a sort of primary table and supplimentary explansion pack table.
