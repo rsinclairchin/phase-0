@@ -1,7 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
 // I worked on this challenge with: Colin Razevich
-// This challenge took me [#] hours.
+// This challenge took me [4] hours.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -74,90 +74,95 @@ var officers = {
 // __________________________________________
 // Initial Solution
 
-
-
-// for(var voter in votes){
-//   if (votes.hasOwnProperty(voter)){
-//     var count = votes[voter];
-//       for(var cand in count){
-//         if(count.hasOwnProperty(cand)){
-// //           console.log(cand + " = " + count[cand]);
-
-//           var check = count[cand];
-//           console.log(check);
-//         }
-//       }
+// for (var voter in votes){
+//   if (!voteCount.president[votes[voter].president]){
+//     voteCount.president[votes[voter].president] = 1;
+//   }else{ voteCount.president[votes[voter].president] +=1;
+//   }
+//   if (!voteCount.vicePresident[votes[voter].vicePresident]){
+//     voteCount.vicePresident[votes[voter].vicePresident] = 1;
+//   }else{ voteCount.vicePresident[votes[voter].vicePresident] +=1;
+//   }
+//     if (!voteCount.secretary[votes[voter].secretary]){
+//     voteCount.secretary[votes[voter].secretary] = 1;
+//   }else{ voteCount.secretary[votes[voter].secretary] +=1;
+//   }
+//     if (!voteCount.treasurer[votes[voter].treasurer]){
+//     voteCount.treasurer[votes[voter].treasurer] = 1;
+//   }else{ voteCount.treasurer[votes[voter].treasurer] +=1;
 //   }
 // }
 
-for (var voter in votes){
-  if (!voteCount.president[votes[voter].president]){
-    voteCount.president[votes[voter].president] = 1;
-  }else{ voteCount.president[votes[voter].president] +=1;
-  }
-  if (!voteCount.vicePresident[votes[voter].vicePresident]){
-    voteCount.vicePresident[votes[voter].vicePresident] = 1;
-  }else{ voteCount.vicePresident[votes[voter].vicePresident] +=1;
-  }
-    if (!voteCount.secretary[votes[voter].secretary]){
-    voteCount.secretary[votes[voter].secretary] = 1;
-  }else{ voteCount.secretary[votes[voter].secretary] +=1;
-  }
-    if (!voteCount.treasurer[votes[voter].treasurer]){
-    voteCount.treasurer[votes[voter].treasurer] = 1;
-  }else{ voteCount.treasurer[votes[voter].treasurer] +=1;
-  }
-}
 
+// var prez = "Bob";
+// for (var candidate in voteCount.president){
+//   if (voteCount.president[candidate]>voteCount.president[prez]) {
+//     prez = candidate;
+//   };
+// };
+// officers.president = prez;
 
-var prez = "Bob";
-for (var candidate in voteCount.president){
-  if (voteCount.president[candidate]>voteCount.president[prez]) {
-    prez = candidate;
-  };
-};
-officers.president = prez;
+// var vp = "Bob";
+// for (var candidate in voteCount.vicePresident){
+//   if (voteCount.vicePresident[candidate]>voteCount.vicePresident[vp]) {
+//     vp = candidate;
+//   };
+// };
+// officers.vicePresident = vp;
 
-var vp = "Bob";
-for (var candidate in voteCount.vicePresident){
-  if (voteCount.vicePresident[candidate]>voteCount.vicePresident[vp]) {
-    vp = candidate;
-  };
-};
-officers.vicePresident = vp;
+// var sec = "Bob";
+// for (var candidate in voteCount.secretary){
+//   if (voteCount.secretary[candidate]>voteCount.secretary[sec]) {
+//     sec = candidate;
+//   };
+// };
+// officers.secretary = sec;
 
-var sec = "Bob";
-for (var candidate in voteCount.secretary){
-  if (voteCount.secretary[candidate]>voteCount.secretary[sec]) {
-    sec = candidate;
-  };
-};
-officers.secretary = sec;
-
-var treasure = "Bob";
-for (var candidate in voteCount.treasurer){
-  if (voteCount.treasurer[candidate]>voteCount.treasurer[treasure]) {
-    treasure = candidate;
-  };
-};
-officers.treasurer = treasure;
+// var treasure = "Bob";
+// for (var candidate in voteCount.treasurer){
+//   if (voteCount.treasurer[candidate]>voteCount.treasurer[treasure]) {
+//     treasure = candidate;
+//   };
+// };
+// officers.treasurer = treasure;
 
 
 // __________________________________________
 // Refactored Solution
 
+for (var voter in votes) {
+  for (var position in voteCount){
+    var name = votes[voter][position];
+    if (voteCount[position][name] == undefined){
+      voteCount[position][name] = 1;
+    }
+    else {
+      voteCount[position][name] += 1;
+    }
+  }
+}
 
-
-
-
+for (var position in voteCount) {
+  var highestCount = 0;
+  for (var candidate in voteCount[position]){
+    if (voteCount[position][candidate] > highestCount){
+      officers[position] = candidate;
+      highestCount = voteCount[position][candidate];
+    }
+  }
+}
 
 // __________________________________________
 // Reflection
 
+// What did you learn about iterating over nested objects in JavaScript?
+// It can be difficult to keep track of the values you are iterating over, so it's really super important to choose the most descriptive variable names possible to avoid getting lost when you're trying to read through it. It's also really helpful to console.log everything so you know exactly where you are and what you're dealing with.
 
+// Were you able to find useful methods to help you with this?
+// for...in loops were the real star of the show here. hasOwnKey was an absolute waste of space. Still have no idea what it does (besides confuse the hell out of me), but am positive that it did nothing useful for us. Things were much better once we cut that shit out.
 
-
-
+// What concepts were solidified in the process of working through this challenge?
+// Iterating through nested objects. I used to get lost 1+ deep, and now I can usually make it through 2+! The descriptive variable names really help with that, and also just getting used to the idea of having things inside of other things inside of other things.
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
